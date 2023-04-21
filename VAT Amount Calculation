@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class VAT {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the amount of money: ");
+		int money = scan.nextInt();
+
+		double vat;
+
+		if (money <= 1000) {
+			vat = 0.18;
+			double yes = money + (money * vat);
+			double amount = money * vat;
+			System.out.println("Price without VAT: " + money);
+			System.out.println("Price with VAT: " + yes);
+			System.out.println("VAT amount: " + amount);
+		} else {
+			vat = 0.08;
+			double yes = money + (money * vat);
+			double amount = money * vat;
+			System.out.println("Price without VAT: " + money);
+			System.out.println("Price with VAT: " + yes);
+			System.out.println("VAT amount: " + amount);
+
+		}
+
+	}
+
+}
