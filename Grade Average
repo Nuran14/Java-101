@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ortHesaplama {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int math, hist, physics;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the your math grade: ");
+		math = scan.nextInt();
+		System.out.println("Enter the your history grade: ");
+		hist = scan.nextInt();
+		System.out.println("Enter your physics note");
+		physics = scan.nextInt();
+
+		int total = math + physics + hist;
+		double gpa = (double) total / 3;
+		System.out.println("Grade average: " + gpa);
+
+		boolean condition = gpa >= 50;
+		String passOrFail = condition ? "You passed the class" : "You failed the class";
+		System.out.println(passOrFail);
+
+	}
+
+}
