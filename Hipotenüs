@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class hipotenüs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//hipotenüs bulma
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Birinci Dik Kenar Değeri: ");
+		double a = scan.nextDouble();
+		System.out.println("İkinci Dik Kenar Değeri: ");
+		double b = scan.nextDouble();
+		
+		double c = Math.sqrt(a*a+b*b);
+		System.out.println("Hipotenüs uzunluğu: "+c);
+	
+//üçgenin alanını bulma
+		double u;
+		 u = (a+b+c)/2;
+		double area = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+		System.out.println("Üçgenin Alanı; "+area);
+	}
+
+
+		
+	}
