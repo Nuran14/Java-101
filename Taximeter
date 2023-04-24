@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class taximeter {
+
+	public static void main(String[] args) {
+
+		int start = 20;
+		double perKm = 2.20;
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter mileage");
+		double km = scan.nextDouble();
+		double price = (perKm * km) + (start);
+		if (price < 20) {
+			System.out.println("Amount to be paid: 20 TL");
+		} else {
+			System.out.println("Amount to be paid: " + price + "TL");
+		}
+
+	}
+
+}
