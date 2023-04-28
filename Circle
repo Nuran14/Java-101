@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class circle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	Scanner scan = new Scanner(System.in);
+    System.out.print("Enter the radius length: ");
+    double r = scan.nextDouble();
+    double pi = 3.14;
+    double circumference = 2*pi*r;
+    double area =pi*r*r;
+    
+    System.out.println("Circumference of the Circle: "+circumference);
+    System.out.println("Area of the Circle: "+area);
+    
+    //daire diliminin alanı
+    System.out.print("Enter the measure of the central angle: ");
+    int x = scan.nextInt();
+    double area2 =(double) area*x/360;
+    System.out.println("Area of Circle Slice: "+area2);
+    
+		
+		
+		
+		
+	}
+
+}
