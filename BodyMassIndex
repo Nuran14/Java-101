@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Index {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter your height in meters: ");
+		double height = scan.nextDouble();
+		System.out.print("Enter your weight: ");
+		double kilo = scan.nextDouble();
+		
+		double bodyMassIndex = kilo/(height*height);
+		System.out.print("Your Body Mass Index: "+bodyMassIndex);
+		
+		
+		
+		
+		
+
+	}
+
+}
