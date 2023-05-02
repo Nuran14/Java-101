@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class star {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("How many lines does the star have? ");
+		int line = scan.nextInt();
+		String a = "1)Right triangle\n"
+				+"2)Equilateral triangle";
+		System.out.print(a+"\nChoose one triangle: ");
+		int selection = scan.nextInt();
+		String str ="*";
+		boolean bool =true;
+		while(bool) {
+		if(selection==1) {
+			System.out.println(str);
+			for(int i=1 ;i<line ;i++) {
+				str+="*";
+				System.out.println(str);
+				break;
+			}
+			
+		} else if(selection==2) {
+			for (int i = 0; i <= line ; i++) {
+               for (int j = 0; j < (line - i); j++) {
+                   System.out.print(" ");
+            }
+               for (int k = 1; k <= (2 * i)+1; k++) {
+                System.out.print("*");
+            }
+                System.out.println(" ");
+			}
+			break;
+		}
+		else {
+			System.out.println("Your selection is invalid. Try again...");
+			System.out.println(a);
+			selection=scan.nextInt();
+		
+		}
+
+	}}
+}
