@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class ebob_ekok {
+
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		System.out.print("Enter the first numer: ");
+		int num1 = scan.nextInt();
+		System.out.print("Enter the second number: ");
+		int num2= scan.nextInt();
+		int ebob=1;
+		int ekok=1;
+	
+		if(num1>num2) {
+			
+			for(int i=1 ; i<=num2 ; i++) {
+				if(num2%i==0 && num1%i==0) {
+					ebob=i;
+				}
+			}
+		}
+		
+		if(num2>num1) {
+			for(int i=1 ; i<=num1 ; i++) {
+				if(num2%i==0 && num1%i==0) {
+					ebob=i;
+				}
+			}
+		}
+		ekok=(num1*num2)/ebob;
+		System.out.println("EBOB: "+ebob);
+		System.out.println("EKOK: "+ekok);
+
+	}
+
+}
