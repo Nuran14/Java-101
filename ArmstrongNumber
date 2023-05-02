@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class armS {
+
+	public static void main(String[] args) {
+		//orn 1634 = 1^4 + 6^4 + 3^4 + 4^4 = 1634(armstrong) 4=basamak sayısı.
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the number of digits: ");
+		int bas = scan.nextInt();
+		System.out.print("Enter the number: ");
+		int num = scan.nextInt();
+		int temp =num;
+	    int top=0;
+		while(temp>0) {
+		int a=temp%10;
+		temp/=10;
+		int c=1;
+		for(int i=0 ; i<bas ; i++) {
+			 c *=a;
+		}
+		top+=c;
+		
+		}
+		System.out.println(top);
+		if(num==top) {
+			System.out.println(num+"=number is armstrong.");
+		}
+		else {
+			System.out.println(num+"=number is not armstrong");
+		}
+	}
+
+}
