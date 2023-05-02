@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class atm {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String password,userName;
+		int right=3;
+		double balance=15000;
+		System.out.print("Enter your username: ");
+		userName=scan.nextLine();
+		System.out.print("Enter your password: ");
+		password=scan.nextLine();
+		right--;
+		
+		
+		while(right>0) {
+			if(userName.equals("nuran_er")&& password.equals("1234")) {
+				System.out.println("Hello! Welcome to our bank.");
+				System.out.println("******************");
+				boolean a=true;
+				while(a) {
+					String banking ="1)Deposit Money\n"
+							+"2)Withdraw Money\n"
+							+"3)Check Balance\n"
+							+"4)Exit";
+					
+					System.out.println("Make a choice:\n"+banking+"\n******************");
+					int selection= scan.nextInt();
+					switch(selection) {
+					case 1:
+						System.out.print("Amount to be deposited:");
+						double amount=scan.nextDouble();
+						balance+=amount;
+						System.out.println("New Balance: "+balance+"$");
+						break;
+					case 2:
+						System.out.print("Amount to be withdrawn: ");
+						double amount2 = scan.nextDouble();
+						if(balance>=amount2) {
+						balance-=amount2;
+						System.out.println("New Balance: "+balance+"$");
+				}
+						else {
+							System.out.println("Insufficient Balance!");
+						}
+						break;
+					case 3:
+						System.out.println("Your Balance: "+balance+"$");
+						break;
+					case 4:
+						System.out.println("Logging out of your account...");
+						break;
+						default:
+							System.out.println("Invalid Choice...Try Again!");
+						    banking ="1)Deposit Money\n"
+									+"2)Withdraw Money\n"
+									+"3)Check Balance\n"
+									+"4)Exit";
+							
+							System.out.println("Make a choice:\n"+banking+"\n******************");
+							selection= scan.nextInt();
+							
+						
+			}
+			
+		}
+		
+	}
+			else {
+				System.out.println("Username or password is wrong.Please try again...");
+				System.out.print("Enter your username: ");
+				userName=scan.nextLine();
+				System.out.print("Enter your password: ");
+				password=scan.nextLine();
+				right--;
+			}
+
+}
+		System.out.println("Your trial is over. Contact your bank.");
+	}}
